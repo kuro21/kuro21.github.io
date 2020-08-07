@@ -39,6 +39,10 @@ document.addEventListener("DOMContentLoaded", function() {
       if (this.readyState == 4) {
         var content = document.querySelector("#body-content");
         
+        
+        if (this.status == 200) {
+          content.innerHTML = xhttp.responseText;
+        }
         if (page === "home") {
           getTeam();
         } else if (page === "saved") {
@@ -47,9 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
           getStandings();
         }else if (page === "jadwal") {
           getSchedules();
-        }
-        if (this.status == 200) {
-          content.innerHTML = xhttp.responseText;
         } else if (this.status == 404) {
           content.innerHTML = "<p>Halaman tidak ditemukan.</p>";
         } else {

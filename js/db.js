@@ -11,7 +11,7 @@ let dbPromised = idb.open("premier-league", 1, function(upgradeDb) {
         const tx = db.transaction("savedTeam", "readwrite");
         const store = tx.objectStore("savedTeam");
         console.log(club);
-        store.add(club);
+        store.put(club);
         return tx.complete;
       })
       .then(function() {

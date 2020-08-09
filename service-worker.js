@@ -11,8 +11,15 @@ else
     { url: '/team.html', revision: '1' },
     { url: '/nav.html', revision: '1' },
     { url: '/css/materialize.min.css', revision: '1' },
+    { url: '/manifest.json', revision: '1' },
+    { url: '/js/api.js', revision: '1' },
+    { url: '/js/db.js', revision: '1' },
+    { url: '/js/idb.js', revision: '1' },
+    { url: '/js/materialize.min.js', revision: '1' },
+    { url: '/js/nav.js', revision: '1' },
+    { url: '/js/script.js', revision: '1' },
 ], {
-ignoreURLParametersMatching: [/.*/]
+ignoreUrlParametersMatching: [/.*/]
 });
 
 workbox.routing.registerRoute(
@@ -24,14 +31,6 @@ workbox.routing.registerRoute(
   new RegExp('/pages/'),
     workbox.strategies.staleWhileRevalidate({
         cacheName: 'pages'
-    })
-);
-
-
-workbox.routing.registerRoute(
-  new RegExp('/js/'),
-    workbox.strategies.staleWhileRevalidate({
-        cacheName: 'js'
     })
 );
 

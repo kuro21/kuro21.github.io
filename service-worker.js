@@ -15,6 +15,7 @@ else
     { url: '/js/api.js', revision: '1' },
     { url: '/js/db.js', revision: '1' },
     { url: '/js/idb.js', revision: '1' },
+    { url: '/js/materialize.js', revision: '1' },
     { url: '/js/materialize.min.js', revision: '1' },
     { url: '/js/nav.js', revision: '1' },
     { url: '/js/script.js', revision: '1' },
